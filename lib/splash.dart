@@ -41,7 +41,7 @@ class _SplashState extends State<Splash> {
                         colors: [Colors.black, Colors.transparent]).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
                   },
                   blendMode: BlendMode.dstIn,
-                  child: Image.asset('assets/profileblack.png')),
+                  child: Image.asset('assets/profilepro.png')),
             ),
           ],
         ),
