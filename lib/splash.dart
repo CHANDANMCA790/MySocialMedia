@@ -11,15 +11,13 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
-
   @override
   void initState() {
     super.initState();
-    Timer(
-      Duration(seconds: 1), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyAbout()));
-    }
-    );
+    Timer(Duration(seconds: 1), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => MyAbout()));
+    });
   }
 
   @override
@@ -34,14 +32,20 @@ class _SplashState extends State<Splash> {
             Container(
               margin: EdgeInsets.only(top: 30),
               child: ShaderMask(
-                  shaderCallback: (rect){
+                  shaderCallback: (rect) {
                     return LinearGradient(
-                        begin: Alignment.center,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.transparent]).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
+                            begin: Alignment.center,
+                            end: Alignment.bottomCenter,
+                            colors: [Colors.black, Colors.transparent])
+                        .createShader(
+                            Rect.fromLTRB(0, 0, rect.width, rect.height));
                   },
                   blendMode: BlendMode.dstIn,
-                  child: Image.asset('assets/profilepro.png')),
+                  child: Image.asset(
+                    'assets/pro.png',
+                    height: 700,
+                    fit: BoxFit.contain,
+                  )),
             ),
           ],
         ),
